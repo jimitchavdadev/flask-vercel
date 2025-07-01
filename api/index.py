@@ -1,6 +1,8 @@
 from flask import Flask, render_template
+import os
 
-app = Flask(__name__)
+# Use the default templates folder (relative to index.py)
+app = Flask(__name__, template_folder="../templates")
 
 @app.route('/')
 def home():
